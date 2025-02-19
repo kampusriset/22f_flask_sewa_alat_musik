@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daftar Alat Musik</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="navbar">
+        <a href="{{ url_for('index') }}">Home</a>
+        <a href="{{ url_for('add') }}" class="button">Tambah Alat Musik</a>
+    </div>
+
+    <div class="container">
+        <h1>Daftar Alat Musik</h1>
+        <table>
+            <tr>
+                <th>Nama</th>
+                <th>Jenis</th>
+                <th>Harga Sewa</th>
+                <th>Aksi</th>
+            </tr>
+            {% for instrument in instruments %}
+            <tr>
+                <td>{{ instrument.name }}</td>
+                <td>{{ instrument.type }}</td>
+                <td>Rp{{ instrument.price_per_day }}/hari</td>
+                <td>
+                    <a href="{{ url_for('edit', id=instrument.id) }}" class="button">Edit</a>
+                    <form action="{{ url_for('delete', id=instrument.id) }}" method="post" style="display:inline;">
+                        <button type="submit">Hapus</button>
+                    </form>
+                </td>
+            </tr>
+            {% endfor %}
+        </table>
+    </div>
+
+    <div class="footer">
+        <p>&copy; 2025 Sistem Manajemen Penyewaan Alat Musik</p>
+    </div>
+</body>
+</html>

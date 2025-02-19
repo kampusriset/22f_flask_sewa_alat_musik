@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Alat Musik</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="navbar">
+        <a href="{{ url_for('index') }}">Home</a>
+    </div>
+
+    <div class="container">
+        <h1>Edit Alat Musik</h1>
+        <form action="{{ url_for('edit', id=instrument.id) }}" method="post">
+            <label for="name">Nama Alat Musik</label>
+            <input type="text" id="name" name="name" value="{{ instrument.name }}" required>
+
+            <label for="type">Jenis</label>
+            <select id="type" name="type" required>
+                <option value="Tiup" {% if instrument.type == "Tiup" %}selected{% endif %}>Tiup</option>
+                <option value="Pukul" {% if instrument.type == "Pukul" %}selected{% endif %}>Pukul</option>
+                <option value="Petik" {% if instrument.type == "Petik" %}selected{% endif %}>Petik</option>
+                <option value="Gesek" {% if instrument.type == "Gesek" %}selected{% endif %}>Gesek</option>
+                <option value="Sentuh" {% if instrument.type == "Sentuh" %}selected{% endif %}>Sentuh</option>
+            </select>
+
+            <label for="price_per_day">Harga Sewa per Hari (Rp)</label>
+            <input type="number" id="price_per_day" name="price_per_day" value="{{ instrument.price_per_day }}" required>
+
+            <button type="submit">Simpan Perubahan</button>
+        </form>
+    </div>
+
+    <div class="footer">
+        <p>&copy; 2025 Sistem Manajemen Penyewaan Alat Musik</p>
+    </div>
+</body>
+</html>
