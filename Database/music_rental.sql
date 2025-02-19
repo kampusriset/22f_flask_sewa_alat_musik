@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 19 Feb 2025 pada 13.50
+-- Waktu pembuatan: 19 Feb 2025 pada 17.59
 -- Versi server: 10.4.32-MariaDB
 -- Versi PHP: 8.2.12
 
@@ -24,45 +24,69 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `instrument`
+-- Struktur dari tabel `instruments`
 --
 
-CREATE TABLE `instrument` (
+CREATE TABLE `instruments` (
   `id` int(11) NOT NULL,
   `name` varchar(100) NOT NULL,
   `type` varchar(50) NOT NULL,
-  `price_per_day` float NOT NULL,
-  `availability` tinyint(1) DEFAULT 1
+  `price_per_day` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
 --
--- Dumping data untuk tabel `instrument`
+-- Dumping data untuk tabel `instruments`
 --
 
-INSERT INTO `instrument` (`id`, `name`, `type`, `price_per_day`, `availability`) VALUES
-(1, 'Gitar Akustik', 'Petik', 50000, 1),
-(2, 'Drum Set Yamaha', 'Pukul', 200000, 1),
-(3, 'Keyboard Roland', 'Sentuh', 150000, 1);
+INSERT INTO `instruments` (`id`, `name`, `type`, `price_per_day`) VALUES
+(1, 'Gitar Akustik', 'Petik', 50000),
+(2, 'Drum Set Yamaha', 'Pukul', 200000),
+(3, 'Keyboard Roland', 'Sentuh', 150000);
+
+-- --------------------------------------------------------
+
+--
+-- Struktur dari tabel `users`
+--
+
+CREATE TABLE `users` (
+  `id` int(11) NOT NULL,
+  `username` varchar(80) NOT NULL,
+  `password` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
 --
 -- Indexes for dumped tables
 --
 
 --
--- Indeks untuk tabel `instrument`
+-- Indeks untuk tabel `instruments`
 --
-ALTER TABLE `instrument`
+ALTER TABLE `instruments`
   ADD PRIMARY KEY (`id`);
+
+--
+-- Indeks untuk tabel `users`
+--
+ALTER TABLE `users`
+  ADD PRIMARY KEY (`id`),
+  ADD UNIQUE KEY `username` (`username`);
 
 --
 -- AUTO_INCREMENT untuk tabel yang dibuang
 --
 
 --
--- AUTO_INCREMENT untuk tabel `instrument`
+-- AUTO_INCREMENT untuk tabel `instruments`
 --
-ALTER TABLE `instrument`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+ALTER TABLE `instruments`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+
+--
+-- AUTO_INCREMENT untuk tabel `users`
+--
+ALTER TABLE `users`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
