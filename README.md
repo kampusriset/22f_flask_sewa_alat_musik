@@ -5,6 +5,9 @@ Sistem Manajemen Penyewaan Alat Musik ini dirancang untuk membantu pengguna agar
 
 # Link Video Dokumentasi Kami
 
+# Kegunaan
+
+
 # FLOWCHART
 
 # Anggota Tim:
@@ -14,8 +17,8 @@ Berperan sebagai Leader
 Jonathan Aldo Setiawan - 2213010362
 Berperan sebagai Programmer
 
-Ardya Zahira Ardhana - 2213010371
-Fokus Pada Jabatan Presenter
+Dwiningsih - 2213010353
+Berperan sebagai Designer
 
-Muhammad Rafi Maliki - 2213010348
-Menerima Bertanggung Jawab Sebagai Leader
+Nasywa Tabita Rasyid - 2213010354
+Berperan sebagai Marketer
