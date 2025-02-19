@@ -6,5 +6,5 @@ def perkenalan (nama, nim, peran):
 if __name__ == "__main__":
     nama = "Dwi Ningsih"
     nim = "2213010353"
-    peran = "Mengerjakan Berkelompok"
+    peran = "Designer"
     perkenalan(nama, nim, peran)
