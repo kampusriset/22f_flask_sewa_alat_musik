@@ -5,40 +5,37 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Daftar Alat Musik</title>
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/js/all.min.js"></script>
 </head>
 <body>
-    <div class="navbar">
-        <a href="{{ url_for('index') }}">Home</a>
-        <a href="{{ url_for('add') }}" class="button">Tambah Alat Musik</a>
+    <div class="header">Daftar Alat Musik</div>
+    <div class="menu">
+        <a href="{{ url_for('add') }}" class="btn btn-success"><i class="fas fa-plus"></i> Tambah Alat Musik</a>
+        <a href="{{ url_for('logout') }}" class="btn btn-danger"><i class="fas fa-sign-out-alt"></i> Logout</a>
     </div>
-
     <div class="container">
-        <h1>Daftar Alat Musik</h1>
+        <h2>Selamat datang, {{ username }}</h2>
         <table>
             <tr>
                 <th>Nama</th>
                 <th>Jenis</th>
-                <th>Harga Sewa</th>
+                <th>Harga per Hari</th>
                 <th>Aksi</th>
             </tr>
             {% for instrument in instruments %}
             <tr>
                 <td>{{ instrument.name }}</td>
                 <td>{{ instrument.type }}</td>
-                <td>Rp{{ instrument.price_per_day }}/hari</td>
+                <td>Rp {{ instrument.price_per_day }}</td>
                 <td>
-                    <a href="{{ url_for('edit', id=instrument.id) }}" class="button">Edit</a>
+                    <a href="{{ url_for('edit', id=instrument.id) }}" class="btn btn-primary"><i class="fas fa-edit"></i> Edit</a>
                     <form action="{{ url_for('delete', id=instrument.id) }}" method="post" style="display:inline;">
-                        <button type="submit">Hapus</button>
+                        <button type="submit" class="btn btn-danger"><i class="fas fa-trash"></i> Hapus</button>
                     </form>
                 </td>
             </tr>
             {% endfor %}
         </table>
-    </div>
-
-    <div class="footer">
-        <p>&copy; 2025 Sistem Manajemen Penyewaan Alat Musik</p>
     </div>
 </body>
 </html>
