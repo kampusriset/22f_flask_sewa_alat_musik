@@ -7,7 +7,7 @@ Sistem Manajemen Penyewaan Alat Musik
 
 # Kegunaan
 Aplikasi Sistem Manajemen Penyewaan Alat Musik ini berbasis web yang dirancang untuk membantu pengguna agar dapat 
-lebih mudah lagi dalam memanajemen penyewaan alat musik dengan desain yang menarik.
+lebih mudah lagi dalam memanajemen penyewaan alat musik dengan tampilan web yang di desain semenarik mungkin dan mudah digunakan.
 
 # FLOWCHART
 ![image](https://github.com/user-attachments/assets/d2eb8b67-d9a0-4149-9d7b-7186e5f49fab)
