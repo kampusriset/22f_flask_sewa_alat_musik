@@ -4,7 +4,7 @@
 Sistem Manajemen Penyewaan Alat Musik 
 
 # Link Video Dokumentasi Kami
-https://youtu.be/vLrxqLLGAaA
+Anda dapat menonton video demonstrasi aplikasi kami melalui link berikut: https://youtu.be/vLrxqLLGAaA
 
 # Kegunaan
 Aplikasi Sistem Manajemen Penyewaan Alat Musik ini berbasis web yang dirancang untuk membantu pengguna agar dapat 
