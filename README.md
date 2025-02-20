@@ -1,14 +1,16 @@
 # 22f_flask_sewa_alat_musik
 
-# Sistem Manajemen Penyewaan Alat Musik
-Sistem Manajemen Penyewaan Alat Musik ini dirancang untuk membantu pengguna agar dapat lebih mudah lagi dalam menyewa sebuah alat musik
+# Nama Aplikasi
+Sistem Manajemen Penyewaan Alat Musik 
 
 # Link Video Dokumentasi Kami
 
 # Kegunaan
-
+Aplikasi Sistem Manajemen Penyewaan Alat Musik ini berbasis web yang dirancang untuk membantu pengguna agar dapat 
+lebih mudah lagi dalam mengelola penyewaan alat musik.
 
 # FLOWCHART
+![image](https://github.com/user-attachments/assets/d2eb8b67-d9a0-4149-9d7b-7186e5f49fab)
 
 # Anggota Tim:
 Aprisca Ananda Rosdianty - 2213010349
